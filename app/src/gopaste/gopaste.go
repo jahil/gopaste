@@ -14,11 +14,11 @@ import (
 
 
 var (
-	ROOT_PATH = "/path/to/app/root/"
-	PASTE_PATH = ROOT_PATH + "pastes/"
-	TMPLT_PATH = ROOT_PATH + "static/"
+	ROOT_PATH = "/sprunge/"
+	PASTE_PATH = "/sprunge/pastes/"
+	TMPLT_PATH = "/sprunge/static/"
 
-	SITE_URL = "http://siteurl.com/"
+	SITE_URL = "https://xara.me/"
 	LISTEN_PORT = "8001"
 
 	LANGS = []string{"markup", "html", "css", "clike", "javascript", "java",
@@ -63,7 +63,7 @@ func main() {
 -------------------------------------*/
 
 func handleLand(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "welcome to the jungle")
+	fmt.Fprintf(w, "cat filename | curl -F 'paste=<-' https://xara.me")
 }
 
 
